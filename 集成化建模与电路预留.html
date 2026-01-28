@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深度课件：集成化建模 - 为造物构筑“血管”与“心脏”</title>
+    <style>
+        :root {
+            --primary: #0052D4;
+            --accent: #FF6B6B;
+            --bg: #F4F7F9;
+            --card: #FFFFFF;
+            --text: #2D3436;
+            --circuit: #fbbf24;
+            --industrial: #64748b;
+        }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 80px auto 50px;
+            padding: 20px;
+        }
+        .slide {
+            background: var(--card);
+            border-radius: 32px;
+            padding: 60px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+        .badge-circuit { background: var(--circuit); color: #92400e; }
+        .badge-ind { background: var(--industrial); }
+        
+        h1 { color: var(--primary); font-size: 2.8rem; margin-top: 0; }
+        h2 { color: var(--primary); margin-top: 40px; display: flex; align-items: center; }
+        h2::before { content: '◈'; margin-right: 10px; color: var(--circuit); }
+        p { font-size: 1.15rem; line-height: 1.8; color: #4a5568; }
+        
+        .story-box {
+            background: #fffbeb;
+            border: 2px solid #fef3c7;
+            padding: 30px;
+            border-radius: 20px;
+            font-style: italic;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .card-item {
+            background: #f8fbff;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #e1efff;
+        }
+        .card-item h3 { color: var(--primary); margin-top: 0; }
+
+        .tech-specs {
+            background: #f1f5f9;
+            border-radius: 24px;
+            padding: 30px;
+            margin-top: 20px;
+            border: 1px solid #e2e8f0;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+            text-align: center;
+        }
+        .tech-data {
+            background: white;
+            padding: 15px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .tech-data b { display: block; font-size: 1.5rem; color: var(--primary); }
+
+        .warning-box {
+            background: #fff5f5;
+            border-left: 6px solid #fc8181;
+            padding: 20px;
+            border-radius: 0 15px 15px 0;
+            margin-top: 30px;
+        }
+
+        .practice-zone {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 24px;
+        }
+        .practice-zone h2 { color: #fbbf24; border: none; }
+
+        .img-placeholder {
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        2026 数实融合科创大师：集成化建模与电路预留
+    </div>
+
+    <div class="container">
+
+        <!-- Slide 1: 课程导入与目标 -->
+        <div class="slide">
+            <span class="badge">SESSION 01：造物的“内在美”</span>
+            <h1>集成化建模：为灵魂筑巢</h1>
+            <p>如果说 3D 打印的外壳是造物的“皮肤”，SolidWorks 设计的结构是“骨骼”，那么电子电路就是造物的“灵魂”。今天，我们要学习如何像建筑师一样，为这些灵魂设计舒适、精准的“房间”。</p>
+            
+            <div style="display: flex; gap: 30px; align-items: center; margin-top: 30px;">
+                <div style="flex: 1.2;">
+                    <h2>课程目标</h2>
+                    <ul>
+                        <li><b>空间规划</b>：学会在 3D 实体内部进行“二次空间分配”。</li>
+                        <li><b>精密约束</b>：掌握电池仓、PCB座、线槽的建模规范。</li>
+                        <li><b>工程直觉</b>：理解“装配间隙”与“散热逻辑”的重要性。</li>
+                        <li><b>逆向应用</b>：将元器件实测数据转化为 SW 中的占位特征。</li>
+                    </ul>
+                </div>
+                <div style="flex: 1;" class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1558467523-46113f1fcf72?auto=format&fit=crop&q=80&w=800');"></div>
+            </div>
+        </div>
+
+        <!-- Slide 2: 课程小故事 -->
+        <div class="slide">
+            <span class="badge">SESSION 02：造物小故事</span>
+            <h2>“乱成一团的扫地机器人”</h2>
+            <div class="story-box">
+                小强设计了一个超酷的扫地机器人外壳，打印出来非常漂亮。但当他准备安装电路时，麻烦来了：电池塞不进去，导线像乱麻一样露在外面，开关一按就缩进了壳子里。最后，他只能用胶带把所有东西粘在外壳上，机器人变成了一个“胶带怪”。
+                <br><br>
+                <b>启示：</b>真正的工程师在画第一笔草图时，就已经想好了每一根线的去处。今天，我们要拒绝“胶带怪”，学习真正的集成化设计。
+            </div>
+        </div>
+
+        <!-- Slide 3: 象形思考与功能性思考 -->
+        <div class="slide">
+            <span class="badge">SESSION 03：深度思考</span>
+            <h2>象形思考：身体里的“基础设施”</h2>
+            <div class="grid">
+                <div class="card-item">
+                    <h3>血管 = 线槽</h3>
+                    <p>导线就像血管，必须有固定的路径（线槽），否则会干扰其他零件运动。</p>
+                </div>
+                <div class="card-item">
+                    <h3>心脏 = 电池仓</h3>
+                    <p>心脏需要坚固的保护（胸腔），电池仓也需要卡扣和盖子来确保安全。</p>
+                </div>
+                <div class="card-item">
+                    <h3>大脑 = PCB主板</h3>
+                    <p>大脑需要精准的固定位（螺丝柱），不能在壳子里晃来晃去。</p>
+                </div>
+            </div>
+            <h2>功能性思考：为什么要预留？</h2>
+            <p><b>模块化维护</b>：好的预留设计，让你在电池没电或电路故障时，可以轻松打开盖子更换，而不是拆掉整个作品。</p>
+        </div>
+
+        <!-- Slide 4: 知识点教学 - 三大集成特征 -->
+        <div class="slide">
+            <span class="badge badge-circuit">SESSION 04：硬核干货</span>
+            <h1>建模核心：集成化特征三要素</h1>
+            <div class="grid">
+                <div class="card-item" style="border-top: 5px solid var(--primary);">
+                    <h3>1. 螺丝柱 (Bosses)</h3>
+                    <p><b>功能</b>：固定 PCB 或外壳。内孔直径应比自攻螺丝小 0.2mm，利用摩擦力咬合。</p>
+                </div>
+                <div class="card-item" style="border-top: 5px solid var(--accent);">
+                    <h3>2. 弹性卡扣 (Snaps)</h3>
+                    <p><b>功能</b>：无螺丝组装电池盖。利用 3D 打印材料的韧性实现“咔嗒”锁定。</p>
+                </div>
+                <div class="card-item" style="border-top: 5px solid var(--circuit);">
+                    <h3>3. 走线桥 (Cable Bridge)</h3>
+                    <p><b>功能</b>：固定导线。在模型内部设计微小的勾状或管状结构。</p>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <h3>⚠️ 重难点展示：</h3>
+                <ul>
+                    <li><b>重点：公差预留</b>。电池标称 14mm，电池仓必须建模 14.3mm，否则打印收缩后永远塞不进去。</li>
+                    <li><b>难点：抽壳顺序</b>。通常先完成外形建模，再使用“抽壳”工具一键生成内部空间，最后在内壁添加固定特征。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 5: 课程延伸 - 深度拆解分析 -->
+        <div class="slide">
+            <span class="badge badge-ind">SESSION 05：高阶延伸</span>
+            <h1>工业级集成拆解分析</h1>
+            
+            <div class="tech-specs">
+                <div class="tech-grid">
+                    <div class="tech-data"><b>0.5 mm</b>散热间隙</div>
+                    <div class="tech-data"><b>2.0 mm</b>螺丝柱壁厚</div>
+                    <div class="tech-data"><b>90°</b>垂直出线</div>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card-item">
+                    <h3>🤖 机器人内部布局</h3>
+                    <p><b>分析</b>：采用“强弱电分离”原则。主控板（大脑）置于顶部避震，电池（重物）置于底部降低重心。这体现了<b>人机工程学中的稳定性设计</b>。</p>
+                </div>
+                <div class="card-item">
+                    <h3>🔌 小家电集成分析</h3>
+                    <p><b>案例</b>：拆解电吹风发现，发热丝与塑料壳之间有专门的隔热支架。<b>集成化建模</b>不仅要考虑空间，还要考虑热量对 3D 打印材料（如 PLA）的影响。</p>
+                </div>
+            </div>
+            <p style="margin-top:20px;"><b>人机工程学原理</b>：开关的位置必须在手指自然握持的范围内，且操作力反馈要清晰。我们在建模时，开关槽位的深度决定了按压的手感。</p>
+        </div>
+
+        <!-- Slide 6: 课堂练习 -->
+        <div class="slide">
+            <span class="badge">SESSION 06：实战演练</span>
+            <div class="practice-zone">
+                <h2>挑战：为你的智能小车设计“标准电池仓”</h2>
+                <ol>
+                    <li><b>测量</b>：测量 5 号电池（AA）的直径和长度。</li>
+                    <li><b>占位建模</b>：在 SW 中画一个比电池稍大（+0.3mm）的圆柱体作为“负空间”。</li>
+                    <li><b>布尔运算</b>：将“负空间”从车身底盘中减去（拉伸切除）。</li>
+                    <li><b>功能集成</b>：在槽位两侧设计导线通孔，并在顶面设计一个简易的滑动盖板槽。</li>
+                    <li><b>思考</b>：如何设计一个小的突起，让电池放进去后不会因为颠簸而掉出来？</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Slide 7: 总结与联系 -->
+        <div class="slide">
+            <span class="badge">SESSION 07：温故知新</span>
+            <h2>本课复习重点</h2>
+            <p>1. <b>空间观</b>：建模时要预判零件的体积，使用“占位模型”法。</p>
+            <p>2. <b>规范性</b>：螺丝柱和卡扣是集成化设计的核心零件。</p>
+            <p>3. <b>容错性</b>：永远给电路留出 0.3mm 以上的余量。</p>
+            
+            <div class="connection-footer" style="margin-top:40px;">
+                <h3>🔗 章节联系：从静态到动态</h3>
+                <p><b>本课关联</b>：它是《电子电路基础》与《3D建模》的合体课。没有这节课，电路就无法安家。</p>
+                <p><b>下课预告</b>：下一节我们将进入《交互逻辑：传感器的感知》。我们将学习如何安装那些细小的传感器，并让它们通过今天设计的“血管”指挥造物运动！</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 数实融合科创实验室 | 少年造物主系列课件 · 集成工程专题
+        </div>
+
+    </div>
+
+</body>
+</html>
