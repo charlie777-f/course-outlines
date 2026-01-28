@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>深度课件：SW拉伸与特征魔法</title>
+    <style>
+        :root {
+            --primary: #0052D4;
+            --accent: #FF6B6B;
+            --bg: #F4F7F9;
+            --card: #FFFFFF;
+            --text: #2D3436;
+            --gold: #f59e0b;
+        }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 80px auto 50px;
+            padding: 20px;
+        }
+        .slide {
+            background: var(--card);
+            border-radius: 32px;
+            padding: 60px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+        h1 { color: var(--primary); font-size: 2.8rem; margin-top: 0; }
+        h2 { color: var(--primary); margin-top: 40px; display: flex; align-items: center; }
+        h2::before { content: '◈'; margin-right: 10px; color: var(--accent); }
+        p { font-size: 1.15rem; line-height: 1.8; color: #4a5568; }
+        
+        /* 故事板块 */
+        .story-box {
+            background: #fff9f0;
+            border: 2px solid #ffeeba;
+            padding: 30px;
+            border-radius: 20px;
+            font-style: italic;
+            position: relative;
+        }
+        .story-box::after { content: '“'; position: absolute; top: 10px; left: 20px; font-size: 4rem; color: #ffeeba; }
+
+        /* 知识点网格 */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .card-item {
+            background: #f8fbff;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #e1efff;
+        }
+        .card-item h3 { color: var(--primary); margin-top: 0; }
+
+        /* 重难点提醒 */
+        .warning-box {
+            background: #fff5f5;
+            border-left: 6px solid #fc8181;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 0 15px 15px 0;
+        }
+
+        /* 象形思考区 */
+        .thinking-section {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            margin-top: 30px;
+        }
+        .thinking-img {
+            flex: 1;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 20px;
+        }
+
+        /* 练习区 */
+        .practice-zone {
+            background: linear-gradient(135deg, #0052D4 0%, #4364F7 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 24px;
+        }
+        .practice-zone h2 { color: white; border: none; }
+        .practice-zone li { margin-bottom: 10px; }
+
+        .connection-footer {
+            background: #2d3436;
+            color: #dfe6e9;
+            padding: 40px;
+            border-radius: 24px;
+            margin-top: 40px;
+        }
+
+        .img-shadow { background-image: url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&q=80&w=800'); }
+        .img-lego { background-image: url('https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&q=80&w=800'); }
+        .img-city { background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&q=80&w=800'); }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        2026 数实融合科创大师：SolidWorks 特征魔法课
+    </div>
+
+    <div class="container">
+
+        <!-- 第1页：课程导入与目标 -->
+        <div class="slide">
+            <span class="badge">SESSION 01：开启新世界</span>
+            <h1>拉伸：从“影子”到“实体”的飞跃</h1>
+            <div class="thinking-section">
+                <div style="flex: 1.5;">
+                    <h2>课程目标</h2>
+                    <ul>
+                        <li><b>理解维度</b>：明白什么是2D（草图）到3D（特征）的跨越。</li>
+                        <li><b>掌握核心</b>：学会使用“拉伸凸台”和“拉伸切除”命令。</li>
+                        <li><b>工程思维</b>：学习“先定地基，再施魔法”的建模逻辑。</li>
+                    </ul>
+                </div>
+                <div class="thinking-img img-shadow"></div>
+            </div>
+            <p><b>导入思考：</b>如果你在沙滩上踩下一个脚印，影子是平的；但如果你往脚印里灌满水泥并拔出来，它就变成了立体的。这就是“拉伸”！</p>
+        </div>
+
+        <!-- 第2页：课程小故事 -->
+        <div class="slide">
+            <span class="badge">SESSION 02：造物小故事</span>
+            <h2>“消失的饼干模具”</h2>
+            <div class="story-box">
+                小明想为妈妈做一个独一无二的爱心饼干，但他发现家里只有圆形的模具。于是小明想：如果我能在纸上画出一个爱心，然后像变魔术一样让它长高，我不就拥有了一个立体的爱心模具吗？
+                <br><br>
+                他打开了 SolidWorks，画出了那个爱心影子，轻轻点了一下“拉伸”，一个完美的 3D 饼干模具就这样诞生了！今天，我们要学习的就是这项让梦想“长高”的魔法。
+            </div>
+        </div>
+
+        <!-- 第3页：象形思考与功能性思考 -->
+        <div class="slide">
+            <span class="badge">SESSION 03：深度思考</span>
+            <h2>象形思考：它像什么？</h2>
+            <p>在工程设计中，很多复杂的机器都是由简单的“拉伸”组成的。让我们玩个游戏：</p>
+            <div class="grid">
+                <div class="card-item">
+                    <h3>吸管</h3>
+                    <p>它是圆形的影子拉伸，中间再切掉一个圆。</p>
+                </div>
+                <div class="card-item">
+                    <h3>摩天大楼</h3>
+                    <p>它是各种奇怪多边形的影子，向天空无限拉伸。</p>
+                </div>
+                <div class="card-item">
+                    <h3>螺丝钉</h3>
+                    <p>它是六角形的影子拉伸，再加上一根细长的圆柱拉伸。</p>
+                </div>
+            </div>
+            <h2>功能性思考：为什么要拉伸？</h2>
+            <p><b>厚度决定强度</b>：同样的影子，拉伸得越高，它就越结实。比如我们的手机外壳，就是通过精确的拉伸高度来保护内部零件的。</p>
+        </div>
+
+        <!-- 第4页：知识点教学（重难点） -->
+        <div class="slide">
+            <span class="badge">SESSION 04：硬核干货</span>
+            <h1>特征魔法：拉伸与切除</h1>
+            <div class="grid">
+                <div class="card-item" style="border-top: 5px solid var(--primary);">
+                    <h3>1. 拉伸凸台（加法）</h3>
+                    <p>将封闭的草图沿垂直方向填充材料。它是“无中生有”的第一步。</p>
+                </div>
+                <div class="card-item" style="border-top: 5px solid var(--accent);">
+                    <h3>2. 拉伸切除（减法）</h3>
+                    <p>在已有的实体上，沿草图方向减去材料。它是“精雕细琢”的关键。</p>
+                </div>
+            </div>
+
+            <div class="warning-box">
+                <h3>⚠️ 课程重难点提醒：</h3>
+                <ul>
+                    <li><b>重点</b>：草图必须是“封闭”的（像一个完整的圆圈），否则魔法会失效！</li>
+                    <li><b>难点</b>：基准面的选择。记住，你想让物体往哪个方向长，就选垂直于那个方向的面。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 第5页：课堂练习 -->
+        <div class="slide">
+            <span class="badge">SESSION 05：实战演练</span>
+            <div class="practice-zone">
+                <h2>挑战：复刻“乐高机械梁”</h2>
+                <p>我们要利用今天学的“加法”和“减法”，做一个真正的工程零件：</p>
+                <ol>
+                    <li>在<b>前视基准面</b>画一个长 100mm，高 10mm 的长方形。</li>
+                    <li>使用<b>拉伸凸台</b>，向两侧对称拉伸 10mm（加法）。</li>
+                    <li>在长方形的侧面画一个直径 5mm 的圆。</li>
+                    <li>使用<b>拉伸切除</b>，选择“完全贯穿”，打出一个销钉孔（减法）。</li>
+                    <li><b>进阶</b>：配合上节课的“线性阵列”，打出一排整齐的孔！</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- 第6页：课后练习与章节联系 -->
+        <div class="slide">
+            <span class="badge">SESSION 06：温故知新</span>
+            <h2>课后练习与复习</h2>
+            <p>1. <b>测量任务</b>：回家找一个圆形的瓶盖，用量尺量出它的直径和厚度，在 SW 中复刻它。</p>
+            <p>2. <b>复习思考</b>：如果我想做一个中间粗、两头细的杠铃，只用一次“拉伸”能完成吗？为什么？</p>
+            
+            <div class="connection-footer">
+                <h3>🔗 章节联系：承上启下</h3>
+                <p><b>本课关联</b>：它是基于上一节课《草图绘制》的成果进行的。没有好的草图，就没有好的拉伸。</p>
+                <p><b>下课预告</b>：下一节我们将学习《旋转特征》。如果说拉伸是“直着长”，那旋转就是“绕着圈长”，能做出更圆润的造型（如花瓶、球体）！</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 数实融合科创实验室 | 少年造物主系列课件 · 严禁翻印
+        </div>
+
+    </div>
+
+</body>
+</html>

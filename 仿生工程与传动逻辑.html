@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大师级课件：仿生关节与机械传动 - 2026科创系列</title>
+    <style>
+        :root {
+            --primary: #0052D4;
+            --accent: #FF6B6B;
+            --bg: #F4F7F9;
+            --card: #FFFFFF;
+            --text: #2D3436;
+            --nature: #10b981;
+            --engineering: #f59e0b;
+        }
+        body {
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--primary);
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+            z-index: 1000;
+            font-weight: bold;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .container {
+            max-width: 1100px;
+            margin: 80px auto 50px;
+            padding: 20px;
+        }
+        .slide {
+            background: var(--card);
+            border-radius: 32px;
+            padding: 60px;
+            margin-bottom: 60px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.05);
+            position: relative;
+        }
+        .badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+        }
+        .badge-nature { background: var(--nature); }
+        .badge-eng { background: var(--engineering); }
+        
+        h1 { color: var(--primary); font-size: 2.8rem; margin-top: 0; }
+        h2 { color: var(--primary); margin-top: 40px; display: flex; align-items: center; }
+        h2::before { content: '◈'; margin-right: 10px; color: var(--accent); }
+        p { font-size: 1.15rem; line-height: 1.8; color: #4a5568; }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        .card-item {
+            background: #f8fbff;
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #e1efff;
+        }
+        .card-item h3 { color: var(--primary); margin-top: 0; }
+
+        .anatomy-box {
+            background: #fff5f5;
+            border-radius: 24px;
+            padding: 30px;
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            border: 1px solid #fed7d7;
+        }
+        .anatomy-data {
+            background: white;
+            padding: 15px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            text-align: center;
+            flex: 1;
+        }
+        .anatomy-data big { font-size: 2.5rem; color: var(--accent); font-weight: bold; }
+
+        .infographic {
+            background: #f0f7ff;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 0;
+        }
+
+        .practice-zone {
+            background: linear-gradient(135deg, #0052D4 0%, #4364F7 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 24px;
+        }
+        .practice-zone h2 { color: white; border: none; }
+
+        .img-placeholder {
+            width: 100%;
+            height: 350px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 24px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        2026 数实融合科创大师：仿生工程与传动逻辑
+    </div>
+
+    <div class="container">
+
+        <!-- Slide 1: 课程导入与人体解剖学 -->
+        <div class="slide">
+            <span class="badge">SESSION 01：人体——最精密的机器</span>
+            <h1>解密人体：天然的仿生模板</h1>
+            <p>在学习制造机器之前，我们先来看看宇宙中最精密的“设计稿”——人体。你知道吗？为了让我们能跑、能跳、能写字，人体配备了一套复杂的关节系统。</p>
+            
+            <div class="anatomy-box">
+                <div class="anatomy-data">
+                    <big>206</big><br>块骨头
+                </div>
+                <div class="anatomy-data">
+                    <big>78+</big><br>可活动关节
+                </div>
+                <div class="anatomy-data">
+                    <big>360°</big><br>全向运动
+                </div>
+            </div>
+
+            <h2>肩关节：人体最自由的部位</h2>
+            <p>人的肩膀是一个完美的<b>球窝关节</b>。它可以实现：</p>
+            <ul>
+                <li><b>前屈/后伸</b>：约 180° / 60°</li>
+                <li><b>外展/内收</b>：约 180°</li>
+                <li><b>内外旋转</b>：约 90°</li>
+            </ul>
+            <p><b>人机工程学原理：</b>当我们设计外骨骼或机甲时，如果机械关节的旋转中心与肩膀的球心不重合，就会产生“干涉”，导致运动受阻甚至受伤。</p>
+        </div>
+
+        <!-- Slide 2: 仿生翼与结构学 -->
+        <div class="slide">
+            <span class="badge badge-nature">SESSION 02：仿生翼——结构与升力的结合</span>
+            <h1>从羽毛到连杆：仿生翼拆解</h1>
+            <div class="img-placeholder" style="background-image: url('https://images.unsplash.com/photo-1460661419201-fd4ce18a802b?auto=format&fit=crop&q=80&w=800');"></div>
+            <h2>结构学原理：多级联动</h2>
+            <p>鸟类的翅膀不是一块硬板，而是由<b>肱骨、桡骨、尺骨</b>组成的多级连杆系统。在 SolidWorks 中，我们需要通过多个“销钉配合”来模拟这种运动：</p>
+            <div class="grid">
+                <div class="card-item">
+                    <h3>折叠效率</h3>
+                    <p>通过几何杠杆原理，电机旋转 30°，翅膀末端可以扇动 90°，极大节省了动力。</p>
+                </div>
+                <div class="card-item">
+                    <h3>变面积设计</h3>
+                    <p>仿生翼在下压时完全展开增加升力，在上提时折叠减少阻力。这就是<b>结构决定功能</b>。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: 齿轮传动原理 -->
+        <div class="slide">
+            <span class="badge badge-eng">SESSION 03：动力心脏——齿轮传动</span>
+            <h1>让动力流动：齿轮的奥秘</h1>
+            <p>关节是骨骼，而齿轮就是传递能量的“血管”。为什么我们需要齿轮？</p>
+            <div class="infographic">
+                <h3>齿轮传动三大定律：</h3>
+                <ol>
+                    <li><b>改变方向</b>：两个齿轮啮合，转动方向相反。</li>
+                    <li><b>改变力矩（变速）</b>：小齿轮带大齿轮，速度变慢，但“力气”变大（减速增扭）。</li>
+                    <li><b>精确同步</b>：齿轮咬合不会像皮带一样打滑，保证了动作的精准性。</li>
+                </ol>
+            </div>
+            <p><b>仿生应用：</b>在仿生鱼的尾部，我们常用一组小型行星齿轮箱来放大舵机的力量，从而扇动坚硬的鱼尾。而在仿生昆虫中，齿轮则用来实现高频的往复运动。</p>
+        </div>
+
+        <!-- Slide 4: 知识点教学 -->
+        <div class="slide">
+            <span class="badge">SESSION 04：建模实战</span>
+            <h1>SW 魔法：构建你的仿生零件</h1>
+            <div class="grid">
+                <div class="card-item" style="border-top: 5px solid var(--primary);">
+                    <h3>球头配合 (Ball Joint)</h3>
+                    <p>复刻肩膀的自由。在 SW 中使用“旋转”生成球，使用“配合-球心重合”锁定运动中心。</p>
+                </div>
+                <div class="card-item" style="border-top: 5px solid var(--engineering);">
+                    <h3>齿轮工具箱</h3>
+                    <p>学习调用 Toolbox 里的标准齿轮，或者通过“阵列”手动绘制简易齿形。</p>
+                </div>
+            </div>
+            <div class="warning-box" style="margin-top:30px;">
+                <h3>⚠️ 工程师笔记：</h3>
+                <ul>
+                    <li><b>齿隙 (Backlash)</b>：3D 打印齿轮时，两个齿之间必须留出 0.15mm 左右的空隙，否则会卡死！</li>
+                    <li><b>自润滑</b>：仿生关节摩擦力大，建议在打印件接触面涂抹少量凡士林。</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 5: 课堂练习 -->
+        <div class="slide">
+            <span class="badge">SESSION 05：挑战任务</span>
+            <div class="practice-zone">
+                <h2>终极挑战：设计一个“带齿轮驱动的仿生手掌”</h2>
+                <ol>
+                    <li><b>逆向测量</b>：测量并建模一个手掌基座。</li>
+                    <li><b>关节安装</b>：在基座上设计 5 个球头插槽，模拟手指根部。</li>
+                    <li><b>传动设计</b>：在手心位置设计一个大齿轮，带动 5 个小拨杆（模拟肌腱）。</li>
+                    <li><b>思考</b>：当大齿轮转动时，如何让 5 根手指同时向内握紧？</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- Slide 6: 总结与联系 -->
+        <div class="slide">
+            <span class="badge">SESSION 06：温故知新</span>
+            <h2>本课复习重点</h2>
+            <p>1. <b>人体知识</b>：记住肩关节是球窝结构，活动范围近乎全向。</p>
+            <p>2. <b>机械原理</b>：理解小齿轮带大齿轮是为了增加扭矩（力气）。</p>
+            <p>3. <b>仿生逻辑</b>：结构的设计必须服务于运动的目的（如仿生翼的升力）。</p>
+            
+            <div class="connection-footer" style="margin-top:40px;">
+                <h3>🔗 章节联系：从结构到生命</h3>
+                <p><b>本课关联</b>：它是《机械原理》与《生物学》的交叉课。我们今天设计的齿轮和关节，就是未来机甲的骨骼与传动系统。</p>
+                <p><b>下课预告</b>：下一节我们将进入《AI建模进阶：有机形态塑造》。我们将利用 AI 生成像真实肌肉一样流畅的外壳，包裹住今天设计的硬核关节！</p>
+            </div>
+        </div>
+
+        <div class="footer">
+            &copy; 2026 数实融合科创实验室 | 少年造物主系列课件 · 仿生与传动专题
+        </div>
+
+    </div>
+
+</body>
+</html>

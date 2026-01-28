@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026“数实融合”科创大师：2年期课程体系全解析</title>
+    <style>
+        :root {
+            --primary-blue: #0052D4;
+            --accent-cyan: #00D2FF;
+            --tech-gray: #2D3436;
+            --soft-bg: #F4F7F9;
+            --white: #FFFFFF;
+            --accent-orange: #FF6B6B;
+        }
+        body {
+            font-family: 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', sans-serif;
+            background-color: var(--soft-bg);
+            color: var(--tech-gray);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .header {
+            background: linear-gradient(135deg, var(--primary-blue), #4364F7);
+            color: white;
+            padding: 120px 20px;
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        .header h1 {
+            font-size: 3.2rem;
+            margin: 0;
+            letter-spacing: 3px;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        .header p {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-top: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .stage-card {
+            background: var(--white);
+            border-radius: 40px;
+            margin-bottom: 100px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+        }
+        .stage-hero {
+            display: flex;
+            min-height: 500px;
+        }
+        .stage-card:nth-child(even) .stage-hero {
+            flex-direction: row-reverse;
+        }
+        .stage-image {
+            flex: 1.2;
+            background-size: cover;
+            background-position: center;
+            min-height: 400px;
+        }
+        .stage-info {
+            flex: 1;
+            padding: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .stage-badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--accent-orange), #FF8E53);
+            color: white;
+            padding: 6px 24px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 25px;
+            width: fit-content;
+            box-shadow: 0 4px 15px rgba(255,107,107,0.3);
+        }
+        .stage-title {
+            font-size: 2.4rem;
+            color: var(--primary-blue);
+            margin: 0 0 20px 0;
+            line-height: 1.2;
+        }
+        .stage-desc {
+            font-size: 1.15rem;
+            color: #4a5568;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent-cyan);
+            padding-left: 20px;
+        }
+        .curriculum-list {
+            padding: 40px 60px;
+            background: #fcfdfe;
+            border-top: 1px solid #f0f4f8;
+        }
+        .list-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: var(--tech-gray);
+            display: flex;
+            align-items: center;
+        }
+        .list-title::before {
+            content: '';
+            width: 24px;
+            height: 24px;
+            background: var(--primary-blue);
+            margin-right: 12px;
+            border-radius: 6px;
+        }
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .course-item {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            font-size: 0.95rem;
+            color: #4a5568;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .course-item:hover {
+            border-color: var(--primary-blue);
+            transform: translateX(5px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        .course-item span {
+            color: var(--primary-blue);
+            font-weight: bold;
+            margin-right: 10px;
+            font-family: monospace;
+        }
+        .pbl-highlight {
+            margin-top: 30px;
+            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+            padding: 25px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .pbl-icon {
+            font-size: 2.5rem;
+        }
+        .pbl-text b {
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+        }
+        
+        /* 针对性配图：选用具有教育感和少年感的图片 */
+        .img-stage1 { background-image: url('https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&q=80&w=800'); }
+        .img-stage2 { background-image: url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&q=80&w=800'); }
+        .img-stage3 { background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&q=80&w=800'); }
+        .img-stage4 { background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800'); }
+
+        @media (max-width: 1024px) {
+            .stage-hero, .stage-card:nth-child(even) .stage-hero { flex-direction: column; }
+            .stage-image { min-height: 350px; }
+            .stage-info, .curriculum-list { padding: 40px; }
+            .header h1 { font-size: 2.4rem; }
+        }
+        .footer {
+            text-align: center;
+            padding: 100px 20px;
+            background: var(--dark-slate);
+            color: #94a3b8;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>2026“数实融合”科创大师</h1>
+        <p>2年期全体系课程大纲：从逆向探究到未来造物</p>
+    </div>
+
+    <div class="container">
+
+        <!-- 阶段一 -->
+        <div class="stage-card">
+            <div class="stage-hero">
+                <div class="stage-image img-stage1"></div>
+                <div class="stage-info">
+                    <div class="stage-badge">第一学期：三年级上</div>
+                    <h2 class="stage-title">发现造物之美</h2>
+                    <p class="stage-desc">
+                        开启造物者的第一视角。通过拆解经典积木学习工业标准，掌握拓竹高速打印与SW基础拉伸建模。
+                    </p>
+                    <div class="pbl-highlight">
+                        <div class="pbl-icon">💡</div>
+                        <div class="pbl-text">
+                            <b>PBL大项目：校园生活改良家</b><br>
+                            发现生活痛点，设计并打印具备精密卡扣结构的多色文创实物。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="curriculum-list">
+                <div class="list-title">本学期详细课表</div>
+                <div class="course-grid">
+                    <div class="course-item"><span>01</span> 欢迎来到造物空间</div>
+                    <div class="course-item"><span>02</span> 认识你的造物工厂</div>
+                    <div class="course-item"><span>03</span> 拆解探究：起砖器与积木</div>
+                    <div class="course-item"><span>04</span> 测量基础：认识游标卡尺</div>
+                    <div class="course-item"><span>05</span> 手绘草图与三视图初探</div>
+                    <div class="course-item"><span>06</span> SW建模：拉伸与特征魔法</div>
+                    <div class="course-item"><span>07</span> 镜像与阵列：效率造物</div>
+                    <div class="course-item"><span>08</span> IP塑造：我的造物符号</div>
+                    <div class="course-item"><span>09</span> 造物仪式：观影、冥想与立项</div>
+                    <div class="course-item"><span>10</span> PBL沉浸创作与答疑</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 阶段二 -->
+        <div class="stage-card">
+            <div class="stage-hero">
+                <div class="stage-image img-stage2"></div>
+                <div class="stage-info">
+                    <div class="stage-badge">第二学期：三年级下</div>
+                    <h2 class="stage-title">工程思维进阶</h2>
+                    <p class="stage-desc">
+                        深入探索机械传动世界。通过拆解回力车理解动力逻辑，掌握SW装配体配合与品牌叙事。
+                    </p>
+                    <div class="pbl-highlight">
+                        <div class="pbl-icon">🏎️</div>
+                        <div class="pbl-text">
+                            <b>PBL大项目：“速度与激情”汽车工程</b><br>
+                            从底盘转向机构到超跑外形设计，完成一辆具备品牌灵魂的赛车原型。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="curriculum-list">
+                <div class="list-title">本学期详细课表</div>
+                <div class="course-grid">
+                    <div class="course-item"><span>01</span> 拆解探究：回力车的秘密</div>
+                    <div class="course-item"><span>02</span> 逆向测量：齿轮与轴</div>
+                    <div class="course-item"><span>03</span> 动力草绘：传动简图</div>
+                    <div class="course-item"><span>04</span> SW进阶：旋转与扫描特征</div>
+                    <div class="course-item"><span>05</span> 包裹功能：信息刻印</div>
+                    <div class="course-item"><span>06</span> 装配体初探：零件集合</div>
+                    <div class="course-item"><span>07</span> 配合逻辑：让作品动起来</div>
+                    <div class="course-item"><span>08</span> 品牌故事：为造物赋予灵魂</div>
+                    <div class="course-item"><span>09</span> 造物仪式：赛车设计史</div>
+                    <div class="course-item"><span>10</span> PBL沉浸创作：赛车工程</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 阶段三 -->
+        <div class="stage-card">
+            <div class="stage-hero">
+                <div class="stage-image img-stage3"></div>
+                <div class="stage-info">
+                    <div class="stage-badge">第三学期：四年级上</div>
+                    <h2 class="stage-title">AI驱动与数实交叉</h2>
+                    <p class="stage-desc">
+                        跨越想象力边界。学习将AI生成的有机形态与SW工业结构进行“数实融合”，掌握未来生产流。
+                    </p>
+                    <div class="pbl-highlight">
+                        <div class="pbl-icon">🏙️</div>
+                        <div class="pbl-text">
+                            <b>PBL大项目：未来城市空间规划</b><br>
+                            融合AI外观与SW精密结构，搭建包含机甲关节与未来建筑的微缩沙盘。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="curriculum-list">
+                <div class="list-title">本学期详细课表</div>
+                <div class="course-grid">
+                    <div class="course-item"><span>01</span> AI造物：提示词的力量</div>
+                    <div class="course-item"><span>02</span> IP塑造：AI辅助角色草绘</div>
+                    <div class="course-item"><span>03</span> 图生3D：Meshy/Luma实战</div>
+                    <div class="course-item"><span>04</span> 交叉建模：AI模型布尔融合</div>
+                    <div class="course-item"><span>05</span> 模型拆分：分段打印技术</div>
+                    <div class="course-item"><span>06</span> 曲面建模与修补初步</div>
+                    <div class="course-item"><span>07</span> 拆解探究：仿生玩具关节</div>
+                    <div class="course-item"><span>08</span> IP世界观与场景叙事</div>
+                    <div class="course-item"><span>09</span> 造物仪式：赛博朋克城市</div>
+                    <div class="course-item"><span>10</span> PBL沉浸创作：未来社区</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 阶段四 -->
+        <div class="stage-card">
+            <div class="stage-hero">
+                <div class="stage-image img-stage4"></div>
+                <div class="stage-info">
+                    <div class="stage-badge">第四学期：四年级下</div>
+                    <h2 class="stage-title">灵魂赋予</h2>
+                    <p class="stage-desc">
+                        软硬件高度集成的终极挑战。将电子电路嵌入3D实体，完成从静态模型到智能交互硬件的蜕变。
+                    </p>
+                    <div class="pbl-highlight">
+                        <div class="pbl-icon">🤖</div>
+                        <div class="pbl-text">
+                            <b>毕业大项目：2026智能造物大赏</b><br>
+                            综合全栈技能，完成可交互智能硬件作品，并举办正式产品发布会。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="curriculum-list">
+                <div class="list-title">本学期详细课表</div>
+                <div class="course-grid">
+                    <div class="course-item"><span>01</span> 拆解探究：小家电集成布局</div>
+                    <div class="course-item"><span>02</span> 电路基础：电流、开关与灯</div>
+                    <div class="course-item"><span>03</span> 动力集成：电机与舵机控制</div>
+                    <div class="course-item"><span>04</span> 集成化建模：预留电路位</div>
+                    <div class="course-item"><span>05</span> 交互逻辑：传感器的感知</div>
+                    <div class="course-item"><span>06</span> 品牌营销：产品卖点梳理</div>
+                    <div class="course-item"><span>07</span> 包装设计：3D打印品牌外盒</div>
+                    <div class="course-item"><span>08</span> 毕业立项：自主选题可行性</div>
+                    <div class="course-item"><span>09</span> 造物仪式：赋予物体生命</div>
+                    <div class="course-item"><span>10</span> 毕业创作周：2026智能大赏</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>让每个孩子都拥有定义未来的能力。</p>
+        <p style="font-size: 0.8rem; opacity: 0.5; margin-top: 10px;">&copy; 2026 数实融合科创实验室 | 拓竹 & SolidWorks 联合课程体系</p>
+    </div>
+
+</body>
+</html>
